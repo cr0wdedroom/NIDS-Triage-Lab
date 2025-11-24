@@ -1,6 +1,15 @@
 # NIDS-Triage-Lab
 
-A lab demonstrating Network Security Monitoring, this has 4 phases that are -
+This Lab demonstrates end-to-end proficiency in network security monitoring and incident triage. The core objective was to build a functional Intrusion Detection System (IDS) and validate its findings. This involved:
+
+Setting up a two-VM network environment (Kali Linux and Windows 11) with the NIDS monitoring all traffic via Promiscuous Mode.
+
+Configuring Snort to utilize custom rule sets, including content-based and threshold-based detection logic.
+
+Simulating targeted threats (e.g., C2 beaconing, port scanning) to generate security alerts.
+
+Performing SOC triage by utilizing Wireshark for PCAP analysis to confirm alerts as True Positives, successfully bridging the gap between detection tool output and raw network evidence.
+
 
 Phase 1: Environment Setup and Network Preparation  
 Ensured Kali VM is correctly configured to see all network traffic and it is on same network interface with Windows VM.
