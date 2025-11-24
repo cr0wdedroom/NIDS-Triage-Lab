@@ -1,4 +1,3 @@
-
 # Rule 1: Web Shell Upload Attempt (Content Match)
 alert tcp any any -> <windows_ip> 80 (msg:"Web Shell Upload Detected (SID 1000001)"; flow:to_server,established; content:"webshell_upload"; nocase; sid:1000001; rev:1;)
 
