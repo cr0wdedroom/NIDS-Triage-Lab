@@ -45,7 +45,7 @@ Created rules to detect attempts like Web shell Upload, Aggressive Port Scan & S
 <img src="screenshots/custom.rules.png" width="600">  
 
 **Step 2.3: Test Configuration -**  
-Ran a test to ensure Snort can load your configuration and rules without errors.  
+Ran a test to ensure Snort can load configuration and rules without errors.  
 
 <img src="screenshots/test_snort_config_top.png" width="600">  
 <img src="screenshots/test_snort_config_end.png" width="600">  
