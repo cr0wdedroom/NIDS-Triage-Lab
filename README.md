@@ -13,7 +13,7 @@ Phase 1: Environment Setup and Network Preparation
 Ensured Kali VM is correctly configured to see all network traffic and it is on same network interface with Windows VM.  
 
 **Step 1.1: VM IP Address Confirmation -**  
-To get both Kali and Windows VM on same subnet, I switched the Network Adapter Settings to "Private to my MAC". Then executed command `ifconfig` on Kali and `ipconfig` on Windows to confirm the same.  
+To ensure both Kali and Windows VM were on the same subnet, I switched the Network Adapter Settings to Host-Only. Then executed command `ifconfig` on Kali and `ipconfig` on Windows to confirm the same.  
 
 <img src="screenshots/kali_ifconfig.png" width="600">  
 <img src="screenshots/windows_ipconfig.png" width="600">  
