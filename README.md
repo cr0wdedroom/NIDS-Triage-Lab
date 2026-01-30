@@ -34,8 +34,8 @@ Configured Snort using confirmed IPs and added the custom detection logic.
 <img src="screenshots/custom.rules.png" width="600">  
 
 **Step 2.3: Test Configuration**  
-<img src="screenshots/test_config_top.png" width="600">  
-<img src="screenshots/test_config_end.png" width="600">  
+<img src="screenshots/test_snort_config_top.png" width="600">  
+<img src="screenshots/test_snort_config_end.png" width="600">  
 
 
 ---  
