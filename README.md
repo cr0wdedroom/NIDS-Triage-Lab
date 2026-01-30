@@ -27,6 +27,7 @@ Ensured Kali VM is correctly configured to see all network traffic and it is on 
 Phase 2: NIDS Configuration (Snort Setup)  
 ---
 Configured Snort using confirmed IPs and added the custom detection logic.  
+
 **Step 2.1: Define HOME_NET and Configure Snort**  
 <img src="screenshots/snort.conf.png" width="600">  
 
@@ -42,6 +43,7 @@ Configured Snort using confirmed IPs and added the custom detection logic.
 Phase 3: Threat Simulation & Alerting  
 ---
 Triggered Alerts using custom rules and saved them in a log file on Kali VM.  
+
 **Step 3.1: Start Snort in Loggin Mode**  
 <img src="screenshots/snort_logging.png" width="600">  
 
@@ -62,6 +64,7 @@ Triggered Alerts using custom rules and saved them in a log file on Kali VM.
 Phase 4: Packet Analysis & Triage  
 ---
 Used Wireshark to perform PCAP (Packet Analysis) on raw network traffic to confirm the Snort alerts are True Positives.  
+
 **Step 4.1: Filter Rule 1 (Web Shell Content)**  
 <img src="screenshots/filter_rule1.png" width="600">  
 
