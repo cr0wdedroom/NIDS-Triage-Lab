@@ -5,4 +5,4 @@ alert tcp any any -> 172.16.36.130 any (msg:"Web Shell Upload Detected"; flow:to
 alert tcp any any -> 172.16.36.130 1:1024 (msg:"Aggressive Port Scan Detected"; flow:to_server; flags:S; detection_filter:track by_src, count 10, seconds 60; sid: 1000002; rev:1;)
 
 # Rule 3: Custom C2 Beacon User-Agent (HTTP Header) 
-alert tcp any any -> any any (msg:"Possible C2 Beaconing (Custom UA) (SID 1000003)"; flow:to_server,established; http_header; content:"Malware-Agent-42", nocase; sid: 1000003; rev:1;)
+alert tcp any any -> any any (msg:"Possible C2 Beaconing (Custom UA)"; flow:to_server; content:"Malware-Agent-42", nocase; sid: 1000003; rev:1;)
