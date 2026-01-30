@@ -9,8 +9,8 @@ This Lab demonstrates end-to-end proficiency in Network Security Monitoring and 
 
 ---
 Phase 1: Environment Setup and Network Preparation  
----
 Ensured Kali VM is correctly configured to see all network traffic and it is on same network interface with Windows VM.  
+---
 **Step 1.1:**
 
 ---  
