@@ -13,7 +13,7 @@ Phase 1: Environment Setup and Network Preparation
 Ensured Kali VM is correctly configured to see all network traffic and it is on same network interface with Windows VM.  
 
 **Step 1.1: VM IP Address Confirmation**  
-<img src="screenshots/kali_ifconfig.png" width="600">
+<img src="screenshots/kali_ifconfig.png" width="600">  
 **Step 1.2: Enable Promiscuous Mode**  
 **Step 1.3: Install Snort and Verify Interface**  
 
