@@ -43,18 +43,35 @@ Phase 3: Threat Simulation & Alerting
 ---
 Triggered Alerts using custom rules and saved them in a log file on Kali VM.  
 **Step 3.1: Start Snort in Loggin Mode**  
+<img src="screenshots/snort_logging.png" width="600">  
+
 **Step 3.2: Execute Rule 1 Simulation (Web Shell Content)**  
+<img src="screenshots/rule1_simulation.png" width="600">  
+
 **Step 3.3: Execute Rule 2 Simulation (Aggressive Port Scan)**  
+<img src="screenshots/rule2_simulation.png" width="600">  
+
 **Step 3.4: Execute Rule 3 Simulation (SYN Flood)**  
+<img src="screenshots/rule3_simulation.png" width="600">  
+
 **Step 3.5: Stop Snort and Check for log file**  
+<img src="screenshots/log_check.png" width="600">  
+
 
 ---  
 Phase 4: Packet Analysis & Triage  
 ---
 Used Wireshark to perform PCAP (Packet Analysis) on raw network traffic to confirm the Snort alerts are True Positives.  
-**Step 4.1: Packet Analysis with Wireshark**  
-**Step 4.2: Filter Rule 1 (Web Shell Content)**  
-**Step 4.3: Filter Rule 2 (Aggressive Port Scan)**  
-**Step 4.4: Filter Rule 3 (SYN Flood)**  
+**Step 4.1: Filter Rule 1 (Web Shell Content)**  
+<img src="screenshots/filter_rule1.png" width="600">  
+
+**Step 4.2: Filter Rule 2 (Aggressive Port Scan)**  
+<img src="screenshots/filter_rule2.png" width="600">  
+<img src="screenshots/filter_rule2_graph.png" width="600">  
+
+**Step 4.3: Filter Rule 3 (SYN Flood)**  
+<img src="screenshots/filter_rule3.png" width="600">  
+<img src="screenshots/filter_rule3_graph.png" width="600">  
+
 
 ---  
