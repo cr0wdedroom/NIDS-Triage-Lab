@@ -86,13 +86,20 @@ Phase 4: Packet Analysis & Triage
 Used Wireshark to perform PCAP (Packet Analysis) on raw network traffic to confirm the Snort alerts are True Positives.  
 
 **Step 4.1: Filter Rule 1 (Web Shell Content) -**  
+The payload was identified by applying a `tcp contains "webshell"` filter and using the Follow TCP Stream tool to reveal the plaintext "webshell_upload" string within the packet data.  
+
 <img src="screenshots/filter_rule1.png" width="600">  
+<img src="screenshots/filter_rule1_graph.png" width="600">  
 
 **Step 4.2: Filter Rule 2 (Aggressive Port Scan) -**  
+The attack was confirmed using the Wireshark Flow Graph, which visually captured a rapid "waterfall" of SYN packets originating from the `Kali IP (172.16.36.131)` and targeting a sequential range of ports on the `Windows Host (172.16.36.130)`.  
+
 <img src="screenshots/filter_rule2.png" width="600">  
 <img src="screenshots/filter_rule2_graph.png" width="600">  
 
 **Step 4.3: Filter Rule 3 (SYN Flood) -**  
+The DoS attack was visualized using the I/O Graph tool, which displayed a massive, vertical spike in traffic volume corresponding to the 100 SYN packets sent by the `hping3` utility.  
+
 <img src="screenshots/filter_rule3.png" width="600">  
 <img src="screenshots/filter_rule3_graph.png" width="600">  
 
