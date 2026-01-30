@@ -3,7 +3,7 @@
 This Lab demonstrates end-to-end proficiency in Network Security Monitoring and Incident Triage. The core objective was to build a functional Intrusion Detection System (IDS) and validate its findings. This involved:  
 1) Setting up a two-VM network environment (Kali Linux and Windows 11 ARM) with the NIDS monitoring all traffic via Promiscuous Mode.  
 2) Configuring Snort to utilize custom rule sets, including content-based and threshold-based detection logic.  
-3) Simulating targeted threats (e.g., C2 beaconing, port scanning) to generate security alerts.  
+3) Simulating targeted threats (e.g., web shell upload, port scanning) to generate security alerts.  
 4) Performing SOC triage by utilizing Wireshark for PCAP analysis to confirm alerts as True Positives, successfully bridging the gap between detection tool output and raw network evidence.
 
 
