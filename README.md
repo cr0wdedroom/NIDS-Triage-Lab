@@ -40,7 +40,7 @@ Set `HOME_NET` to my subnet i.e, `172.16.36.0/24` and included the custom.rules 
 <img src="screenshots/snort.conf.png" width="600">  
 
 **Step 2.2: Create Custom Rules -**  
-Created rules to detect attempts like Web shell upload, Aggressive Port Scan & SYN Flood (DoS).  
+Created rules to detect attempts like Web shell Upload, Aggressive Port Scan & SYN Flood (DoS).  
 
 <img src="screenshots/custom.rules.png" width="600">  
 
@@ -56,18 +56,27 @@ Phase 3: Threat Simulation & Alerting
 Triggered Alerts using custom rules and saved them in a log file on Kali VM.  
 
 **Step 3.1: Start Snort in Loggin Mode -**  
+Executed Snort with parameter `-k none` to ignore checksums and `-L` to log in PCAP format in the `/var/log/snort` directory.  
+
 <img src="screenshots/snort_logging.png" width="600">  
 
 **Step 3.2: Execute Rule 1 Simulation (Web Shell Content) -**  
+The `nping` command was used to craft a custom TCP packet containing the specific string "webshell_upload" in its payload to trigger the signature-based detection rule.  
+
 <img src="screenshots/rule1_simulation.png" width="600">  
 
 **Step 3.3: Execute Rule 2 Simulation (Aggressive Port Scan) -**  
+The `nmap` command was executed to rapidly scan ports 1 through 20, exceeding the threshold of 10 connection attempts per minute required to trip the reconnaissance alert.  
+
 <img src="screenshots/rule2_simulation.png" width="600">  
 
 **Step 3.4: Execute Rule 3 Simulation (SYN Flood) -**  
+The `hping3` command sent a rapid-fire "storm" of 100 SYN packets at 1ms intervals to overwhelm the target and validate the rate-limiting detection for Denial of Service attacks.  
+
 <img src="screenshots/rule3_simulation.png" width="600">  
 
 **Step 3.5: Stop Snort and Check for log file -**  
+Checked for the generated PCAP log file in `/var/log/snort` directory.
 <img src="screenshots/log_check.png" width="600">  
 
 
