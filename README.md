@@ -14,6 +14,7 @@ Ensured Kali VM is correctly configured to see all network traffic and it is on 
 
 **Step 1.1: VM IP Address Confirmation -**  
 To get both Kali and Windows VM on same subnet, I switched the Network Adapter Settings to "Private to my MAC". Then executed command `ifconfig` on Kali and `ipconfig` on Windows to confirm the same.  
+
 <img src="screenshots/kali_ifconfig.png" width="600">  
 <img src="screenshots/windows_ipconfig.png" width="600">  
 
