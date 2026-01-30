@@ -15,10 +15,13 @@ Ensured Kali VM is correctly configured to see all network traffic and it is on 
 **Step 1.1: VM IP Address Confirmation**  
 <img src="screenshots/kali_ifconfig.png" width="600">  
 <img src="screenshots/windows_ipconfig.png" width="600">  
+
 **Step 1.2: Enable Promiscuous Mode**  
 <img src="screenshots/promiscuous_mode.png" width="600">  
+
 **Step 1.3: Install Snort and Verify Interface**  
 <img src="screenshots/snort_install.png" width="600">  
+
 
 ---  
 Phase 2: NIDS Configuration (Snort Setup)  
