@@ -35,12 +35,17 @@ Phase 2: NIDS Configuration (Snort Setup)
 Configured Snort using confirmed IPs and added the custom detection logic.  
 
 **Step 2.1: Define HOME_NET and Configure Snort -**  
+Set `HOME_NET` to my subnet i.e, `172.16.36.0/24` and included the custom.rules file to load for detection.  
+
 <img src="screenshots/snort.conf.png" width="600">  
 
 **Step 2.2: Create Custom Rules -**  
+Created rules to detect attempts like Web shell upload, Aggressive Port Scan & SYN Flood (DoS).  
+
 <img src="screenshots/custom.rules.png" width="600">  
 
 **Step 2.3: Test Configuration -**  
+Tested snort configuration file to confirm the working of `eth0` interface.
 <img src="screenshots/test_snort_config_top.png" width="600">  
 <img src="screenshots/test_snort_config_end.png" width="600">  
 
