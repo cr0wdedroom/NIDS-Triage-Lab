@@ -1,8 +1,8 @@
 # Rule 1: Web Shell Upload Attempt (Content Match)
-alert tcp any any -> <windows_ip> 80 (msg:"Web Shell Upload Detected (SID 1000001)"; flow:to_server,established; content:"webshell_upload"; nocase; sid:1000001; rev:1;)
+alert tcp any any -> 172.16.36.130 any (msg:"Web Shell Upload Detected"; flow:to_server; content:"webshell_upload", nocase; sid:1000001; rev:1;)
 
 # Rule 2: Aggressive Port Scan Detection (Threshold)
-alert tcp any any -> <windows_ip> 1:1024 (msg:"Aggressive Port Scan Detected (SID 1000002)"; flow:to_server,established; threshold:type limit; track by_src, count 10, seconds 60; sid: 1000002; rev:1;)
+alert tcp any any -> 172.16.36.130 1:1024 (msg:"Aggressive Port Scan Detected"; flow:to_server; flags:S; detection_filter:track by_src, count 10, seconds 60; sid: 1000002; rev:1;)
 
 # Rule 3: Custom C2 Beacon User-Agent (HTTP Header) 
-alert tcp <kali_ip> any -> $EXTERNAL_NET 80 (msg:"Possible C2 Beaconing (Custom UA) (SID 1000003)"; flow:to_server,established; content:"User-Agent|3a| Malware-Agent-42"; http_header; nocase; sid: 1000003; rev:1;)
+alert tcp any any -> any 80 (msg:"Possible C2 Beaconing (Custom UA) (SID 1000003)"; flow:to_server,established; http_header; content:"Malware-Agent-42", nocase; sid: 1000003; rev:1;)
