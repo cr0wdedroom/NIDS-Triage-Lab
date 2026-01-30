@@ -19,6 +19,8 @@ To ensure both Kali and Windows VM were on the same subnet, I switched the Netwo
 <img src="screenshots/windows_ipconfig.png" width="600">  
 
 **Step 1.2: Enable Promiscuous Mode -**  
+Promiscuous mode is useful for full visibility, so I enabled it using `sudo ip link set eth0 promisc on` and checked using command `ip add show eth0`.  
+
 <img src="screenshots/promiscuous_mode.png" width="600">  
 
 **Step 1.3: Install Snort and Verify Interface -**  
